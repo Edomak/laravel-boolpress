@@ -3,6 +3,7 @@
 @section('content')
     <div class="container">
         <h1 class="my-4">Elenco Articoli</h1>
+        <a class="btn btn-primary mb-4" href="{{ route('admin.posts.create') }}">Nuovo articolo</a>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -21,7 +22,9 @@
                         <td>
                             <a class="btn btn-success" href="{{ route('admin.posts.show', $item->id) }}">SHOW</a>
                         </td>
-                        <td>EDIT</td>
+                        <td>
+                            <a class="btn btn-primary" href="{{ route('admin.posts.edit', $item->id) }}">EDIT</a>
+                        </td>
                         <td>DELETE</td>
                     </tr>
                 @endforeach
