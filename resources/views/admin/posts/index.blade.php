@@ -25,7 +25,13 @@
                         <td>
                             <a class="btn btn-primary" href="{{ route('admin.posts.edit', $item->id) }}">EDIT</a>
                         </td>
-                        <td>DELETE</td>
+                        <td>
+                            <form action="{{ route('admin.posts.destroy', $item->id) }}" method="POST" onSubmit="return confirm('Sei sicuro di voler eliminare questo articolo?')">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">DELETE</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

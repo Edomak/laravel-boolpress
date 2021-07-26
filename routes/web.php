@@ -27,4 +27,6 @@ Route::prefix('admin')
 
 });
 
-Route::get('{any?}', 'HomeController@index')->where('any', '.*')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('{any?}', 'HomeController@index')->where('any', '.*')->name('guest.home');

@@ -1,18 +1,18 @@
 <template>
-    <WorkInProgress />
+  <WorkInProgress />
 </template>
 
 <script>
-import WorkInProgress from './components/WorkInProgress.vue'
-
+import WorkInProgress from './components/WorkInProgress';
 export default {
     name: 'App',
     components: {
-        WorkInProgress
+      WorkInProgress
     }
+
 }
 </script>
 
-<style lang="scss" scoped>
+<style>
 
 </style>
