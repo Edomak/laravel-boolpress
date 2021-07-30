@@ -1,5 +1,9 @@
 window.Vue = require('vue').default;
 
+window.axios = require('axios');
+
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
 import App from './App.vue';
 
 const app = new Vue(
