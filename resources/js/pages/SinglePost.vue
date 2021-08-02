@@ -29,7 +29,6 @@ export default {
     data: function() {
         return {
             post: null,
-            
         }
     },
     created: function() {
@@ -56,4 +55,5 @@ export default {
 </script>
 
 <style>
+
 </style>
